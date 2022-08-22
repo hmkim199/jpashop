@@ -13,7 +13,7 @@ import javax.persistence.EntityManager;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
-@Transactional
+@Transactional // 테스트에선 롤백! 테스트 아닐땐 롤백 아님
 class MemberServiceTest {
 
     @Autowired
