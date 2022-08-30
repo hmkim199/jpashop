@@ -29,6 +29,9 @@ public class OrderItem {
     private int orderPrice; // 주문 가격. 상품 가격은 바뀔 수 있기 때문에 주문 당시 가격 정보 저장
     private int count; // 주문 수량
 
+    protected OrderItem(){
+    }
+
     //==생성 메서드==//
     public static OrderItem createOrderItem(Item item, int orderPrice, int count) {
         OrderItem orderItem = new OrderItem();
@@ -47,8 +50,8 @@ public class OrderItem {
 
     //==조회 로직==//
     /*
-    * 주문 상품 전체 가격 조회
-    * */
+     * 주문 상품 전체 가격 조회
+     * */
     public int getTotalPrice() {
         return getOrderPrice() * getCount();
     }
